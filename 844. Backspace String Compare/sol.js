@@ -23,6 +23,6 @@ var backspaceCompare = function(S, T) {
         }
     }
 
-    return str1.join('')== str2.join('')
+     return str1.join('')== str2.join('')
 
 };

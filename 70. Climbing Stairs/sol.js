@@ -9,4 +9,4 @@ var climbStairs = function(n) {
         array.push(array[i-1]+array[i-2])
     }
     return array[n]
-};
+};s

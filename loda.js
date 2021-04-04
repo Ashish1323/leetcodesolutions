@@ -8,7 +8,7 @@ var evaluate = function(s, knowledge) {
   var sub=""
   var s=[]
 //  console.log(s.length)
-  console.log(s[0])
+  console.log(s)
   for(var i=0;i<s.length;i++){
       console.log("ss")
       if(s.charCodeAt(i)==40) stack.push(s[i])

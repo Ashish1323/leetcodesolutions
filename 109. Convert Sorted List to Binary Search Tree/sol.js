@@ -1,4 +1,11 @@
 /**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -7,10 +14,13 @@
  * }
  */
 /**
- * @param {number[]} nums
+ * @param {ListNode} head
  * @return {TreeNode}
  */
-var sortedArrayToBST = function(nums) {
+var sortedListToBST = function(head) {
+    if(!head) return null
+    var arr=[]
+    while(head) arr.push(head.val), head=head.next
     function DFS(nums,left,right){
         if(left>right) return null
         var mid=Math.floor((left+right)/2)
@@ -19,5 +29,5 @@ var sortedArrayToBST = function(nums) {
         node.right=DFS(nums,mid+1,right)
         return node
     }
-    return DFS(nums,0,nums.length-1)
+    return DFS(arr,0,arr.length-1)
 };
